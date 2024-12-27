@@ -1,13 +1,100 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="Tournament_421_LatypovDinarLenarovichModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="Tournament_421_LatypovDinarLenarovichEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Game" EntityType="Tournament_421_LatypovDinarLenarovichModel.Game" />
+    <EntitySet Name="GameRate" EntityType="Tournament_421_LatypovDinarLenarovichModel.GameRate" />
+    <EntitySet Name="Match" EntityType="Tournament_421_LatypovDinarLenarovichModel.Match" />
+    <EntitySet Name="Moderator" EntityType="Tournament_421_LatypovDinarLenarovichModel.Moderator" />
+    <EntitySet Name="Player" EntityType="Tournament_421_LatypovDinarLenarovichModel.Player" />
+    <EntitySet Name="PlayerOfTeam" EntityType="Tournament_421_LatypovDinarLenarovichModel.PlayerOfTeam" />
+    <EntitySet Name="Request" EntityType="Tournament_421_LatypovDinarLenarovichModel.Request" />
+    <EntitySet Name="RequestMatch" EntityType="Tournament_421_LatypovDinarLenarovichModel.RequestMatch" />
+    <EntitySet Name="RequestPlayer" EntityType="Tournament_421_LatypovDinarLenarovichModel.RequestPlayer" />
+    <EntitySet Name="Role" EntityType="Tournament_421_LatypovDinarLenarovichModel.Role" />
+    <EntitySet Name="State" EntityType="Tournament_421_LatypovDinarLenarovichModel.State" />
+    <EntitySet Name="sysdiagrams" EntityType="Tournament_421_LatypovDinarLenarovichModel.sysdiagrams" />
+    <EntitySet Name="Team" EntityType="Tournament_421_LatypovDinarLenarovichModel.Team" />
+    <EntitySet Name="TeamRole" EntityType="Tournament_421_LatypovDinarLenarovichModel.TeamRole" />
+    <EntitySet Name="Tournament" EntityType="Tournament_421_LatypovDinarLenarovichModel.Tournament" />
+    <EntitySet Name="Type" EntityType="Tournament_421_LatypovDinarLenarovichModel.Type" />
+    <EntitySet Name="UserLogin" EntityType="Tournament_421_LatypovDinarLenarovichModel.UserLogin" />
+    <AssociationSet Name="FK_GameRate_Game" Association="Tournament_421_LatypovDinarLenarovichModel.FK_GameRate_Game">
+      <End Role="Game" EntitySet="Game" />
+      <End Role="GameRate" EntitySet="GameRate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tournament_Game" Association="Tournament_421_LatypovDinarLenarovichModel.FK_Tournament_Game">
+      <End Role="Game" EntitySet="Game" />
+      <End Role="Tournament" EntitySet="Tournament" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GameRate_Player" Association="Tournament_421_LatypovDinarLenarovichModel.FK_GameRate_Player">
+      <End Role="Player" EntitySet="Player" />
+      <End Role="GameRate" EntitySet="GameRate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Match_Tournament" Association="Tournament_421_LatypovDinarLenarovichModel.FK_Match_Tournament">
+      <End Role="Tournament" EntitySet="Tournament" />
+      <End Role="Match" EntitySet="Match" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RequestMatch_Match" Association="Tournament_421_LatypovDinarLenarovichModel.FK_RequestMatch_Match">
+      <End Role="Match" EntitySet="Match" />
+      <End Role="RequestMatch" EntitySet="RequestMatch" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Moderator_Access" Association="Tournament_421_LatypovDinarLenarovichModel.FK_Moderator_Access">
+      <End Role="Role" EntitySet="Role" />
+      <End Role="Moderator" EntitySet="Moderator" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Moderator_UserLogin" Association="Tournament_421_LatypovDinarLenarovichModel.FK_Moderator_UserLogin">
+      <End Role="UserLogin" EntitySet="UserLogin" />
+      <End Role="Moderator" EntitySet="Moderator" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MatchPlayer_Player" Association="Tournament_421_LatypovDinarLenarovichModel.FK_MatchPlayer_Player">
+      <End Role="Player" EntitySet="Player" />
+      <End Role="RequestPlayer" EntitySet="RequestPlayer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Player_UserLogin" Association="Tournament_421_LatypovDinarLenarovichModel.FK_Player_UserLogin">
+      <End Role="UserLogin" EntitySet="UserLogin" />
+      <End Role="Player" EntitySet="Player" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PlayerOfTeam_Team" Association="Tournament_421_LatypovDinarLenarovichModel.FK_PlayerOfTeam_Team">
+      <End Role="Team" EntitySet="Team" />
+      <End Role="PlayerOfTeam" EntitySet="PlayerOfTeam" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PlayerOfTeam_TeamRole" Association="Tournament_421_LatypovDinarLenarovichModel.FK_PlayerOfTeam_TeamRole">
+      <End Role="TeamRole" EntitySet="TeamRole" />
+      <End Role="PlayerOfTeam" EntitySet="PlayerOfTeam" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Request_Tournament" Association="Tournament_421_LatypovDinarLenarovichModel.FK_Request_Tournament">
+      <End Role="Tournament" EntitySet="Tournament" />
+      <End Role="Request" EntitySet="Request" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RequestMatch_Request" Association="Tournament_421_LatypovDinarLenarovichModel.FK_RequestMatch_Request">
+      <End Role="Request" EntitySet="Request" />
+      <End Role="RequestMatch" EntitySet="RequestMatch" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RequestPlayer_Request" Association="Tournament_421_LatypovDinarLenarovichModel.FK_RequestPlayer_Request">
+      <End Role="Request" EntitySet="Request" />
+      <End Role="RequestPlayer" EntitySet="RequestPlayer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Team_Request" Association="Tournament_421_LatypovDinarLenarovichModel.FK_Team_Request">
+      <End Role="Request" EntitySet="Request" />
+      <End Role="Team" EntitySet="Team" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tournament_State" Association="Tournament_421_LatypovDinarLenarovichModel.FK_Tournament_State">
+      <End Role="State" EntitySet="State" />
+      <End Role="Tournament" EntitySet="Tournament" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tournament_Type" Association="Tournament_421_LatypovDinarLenarovichModel.FK_Tournament_Type">
+      <End Role="Type" EntitySet="Type" />
+      <End Role="Tournament" EntitySet="Tournament" />
+    </AssociationSet>
+  </EntityContainer>
   <EntityType Name="Game">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-    <NavigationProperty Name="GameRate" Relationship="Self.FK_GameRate_Game" FromRole="Game" ToRole="GameRate" />
-    <NavigationProperty Name="Tournament" Relationship="Self.FK_Tournament_Game" FromRole="Game" ToRole="Tournament" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="GameRate" Relationship="Tournament_421_LatypovDinarLenarovichModel.FK_GameRate_Game" FromRole="Game" ToRole="GameRate" />
+    <NavigationProperty Name="Tournament" Relationship="Tournament_421_LatypovDinarLenarovichModel.FK_Tournament_Game" FromRole="Game" ToRole="Tournament" />
   </EntityType>
   <EntityType Name="GameRate">
     <Key>
@@ -18,8 +105,8 @@
     <Property Name="IdGame" Type="Int32" Nullable="false" />
     <Property Name="Rating" Type="Int32" Nullable="false" />
     <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="Game" Relationship="Self.FK_GameRate_Game" FromRole="GameRate" ToRole="Game" />
-    <NavigationProperty Name="Player" Relationship="Self.FK_GameRate_Player" FromRole="GameRate" ToRole="Player" />
+    <NavigationProperty Name="Game" Relationship="Tournament_421_LatypovDinarLenarovichModel.FK_GameRate_Game" FromRole="GameRate" ToRole="Game" />
+    <NavigationProperty Name="Player" Relationship="Tournament_421_LatypovDinarLenarovichModel.FK_GameRate_Player" FromRole="GameRate" ToRole="Player" />
   </EntityType>
   <EntityType Name="Match">
     <Key>
@@ -30,8 +117,8 @@
     <Property Name="StartTimestamp" Type="DateTime" Precision="3" />
     <Property Name="Duration" Type="Time" Precision="6" />
     <Property Name="Results" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="Tournament" Relationship="Self.FK_Match_Tournament" FromRole="Match" ToRole="Tournament" />
-    <NavigationProperty Name="RequestMatch" Relationship="Self.FK_RequestMatch_Match" FromRole="Match" ToRole="RequestMatch" />
+    <NavigationProperty Name="Tournament" Relationship="Tournament_421_LatypovDinarLenarovichModel.FK_Match_Tournament" FromRole="Match" ToRole="Tournament" />
+    <NavigationProperty Name="RequestMatch" Relationship="Tournament_421_LatypovDinarLenarovichModel.FK_RequestMatch_Match" FromRole="Match" ToRole="RequestMatch" />
   </EntityType>
   <EntityType Name="Moderator">
     <Key>
@@ -41,33 +128,31 @@
     <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="ContactInfo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="RoleId" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Role" Relationship="Self.FK_Moderator_Access" FromRole="Moderator" ToRole="Role" />
-    <NavigationProperty Name="UserLogin" Relationship="Self.FK_Moderator_UserLogin" FromRole="Moderator" ToRole="UserLogin" />
+    <NavigationProperty Name="Role" Relationship="Tournament_421_LatypovDinarLenarovichModel.FK_Moderator_Access" FromRole="Moderator" ToRole="Role" />
+    <NavigationProperty Name="UserLogin" Relationship="Tournament_421_LatypovDinarLenarovichModel.FK_Moderator_UserLogin" FromRole="Moderator" ToRole="UserLogin" />
   </EntityType>
   <EntityType Name="Player">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" />
-    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="Surname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="ContactInfo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="GameRate" Relationship="Self.FK_GameRate_Player" FromRole="Player" ToRole="GameRate" />
-    <NavigationProperty Name="RequestPlayer" Relationship="Self.FK_MatchPlayer_Player" FromRole="Player" ToRole="RequestPlayer" />
-    <NavigationProperty Name="UserLogin" Relationship="Self.FK_Player_UserLogin" FromRole="Player" ToRole="UserLogin" />
-    <NavigationProperty Name="PlayerOfTeam" Relationship="Self.FK_PlayerOfTeam_Player" FromRole="Player" ToRole="PlayerOfTeam" />
+    <NavigationProperty Name="GameRate" Relationship="Tournament_421_LatypovDinarLenarovichModel.FK_GameRate_Player" FromRole="Player" ToRole="GameRate" />
+    <NavigationProperty Name="RequestPlayer" Relationship="Tournament_421_LatypovDinarLenarovichModel.FK_MatchPlayer_Player" FromRole="Player" ToRole="RequestPlayer" />
+    <NavigationProperty Name="UserLogin" Relationship="Tournament_421_LatypovDinarLenarovichModel.FK_Player_UserLogin" FromRole="Player" ToRole="UserLogin" />
   </EntityType>
   <EntityType Name="PlayerOfTeam">
     <Key>
-      <PropertyRef Name="TeamId" />
-      <PropertyRef Name="PlayerId" />
+      <PropertyRef Name="Id" />
     </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="TeamId" Type="Int32" Nullable="false" />
-    <Property Name="PlayerId" Type="Int32" Nullable="false" />
     <Property Name="IdRole" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Player" Relationship="Self.FK_PlayerOfTeam_Player" FromRole="PlayerOfTeam" ToRole="Player" />
-    <NavigationProperty Name="Team" Relationship="Self.FK_PlayerOfTeam_Team" FromRole="PlayerOfTeam" ToRole="Team" />
-    <NavigationProperty Name="TeamRole" Relationship="Self.FK_PlayerOfTeam_TeamRole" FromRole="PlayerOfTeam" ToRole="TeamRole" />
+    <Property Name="ContactInfo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Team" Relationship="Tournament_421_LatypovDinarLenarovichModel.FK_PlayerOfTeam_Team" FromRole="PlayerOfTeam" ToRole="Team" />
+    <NavigationProperty Name="TeamRole" Relationship="Tournament_421_LatypovDinarLenarovichModel.FK_PlayerOfTeam_TeamRole" FromRole="PlayerOfTeam" ToRole="TeamRole" />
   </EntityType>
   <EntityType Name="Request">
     <Key>
@@ -78,10 +163,10 @@
     <Property Name="DateTimeRequest" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="IdTournament" Type="Int32" Nullable="false" />
     <Property Name="Status" Type="Boolean" Nullable="false" />
-    <NavigationProperty Name="Tournament" Relationship="Self.FK_Request_Tournament" FromRole="Request" ToRole="Tournament" />
-    <NavigationProperty Name="RequestMatch" Relationship="Self.FK_RequestMatch_Request" FromRole="Request" ToRole="RequestMatch" />
-    <NavigationProperty Name="RequestPlayer" Relationship="Self.FK_RequestPlayer_Request" FromRole="Request" ToRole="RequestPlayer" />
-    <NavigationProperty Name="Team" Relationship="Self.FK_Team_Request" FromRole="Request" ToRole="Team" />
+    <NavigationProperty Name="Tournament" Relationship="Tournament_421_LatypovDinarLenarovichModel.FK_Request_Tournament" FromRole="Request" ToRole="Tournament" />
+    <NavigationProperty Name="RequestMatch" Relationship="Tournament_421_LatypovDinarLenarovichModel.FK_RequestMatch_Request" FromRole="Request" ToRole="RequestMatch" />
+    <NavigationProperty Name="RequestPlayer" Relationship="Tournament_421_LatypovDinarLenarovichModel.FK_RequestPlayer_Request" FromRole="Request" ToRole="RequestPlayer" />
+    <NavigationProperty Name="Team" Relationship="Tournament_421_LatypovDinarLenarovichModel.FK_Team_Request" FromRole="Request" ToRole="Team" />
   </EntityType>
   <EntityType Name="RequestMatch">
     <Key>
@@ -94,8 +179,8 @@
     <Property Name="Score" Type="Int32" Nullable="false" />
     <Property Name="CountKill" Type="Int32" Nullable="false" />
     <Property Name="CountDeath" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Match" Relationship="Self.FK_RequestMatch_Match" FromRole="RequestMatch" ToRole="Match" />
-    <NavigationProperty Name="Request" Relationship="Self.FK_RequestMatch_Request" FromRole="RequestMatch" ToRole="Request" />
+    <NavigationProperty Name="Match" Relationship="Tournament_421_LatypovDinarLenarovichModel.FK_RequestMatch_Match" FromRole="RequestMatch" ToRole="Match" />
+    <NavigationProperty Name="Request" Relationship="Tournament_421_LatypovDinarLenarovichModel.FK_RequestMatch_Request" FromRole="RequestMatch" ToRole="Request" />
   </EntityType>
   <EntityType Name="RequestPlayer">
     <Key>
@@ -104,30 +189,30 @@
     <Property Name="IdRequest" Type="Int32" Nullable="false" />
     <Property Name="PlayerId" Type="Int32" Nullable="false" />
     <Property Name="NickName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="Player" Relationship="Self.FK_MatchPlayer_Player" FromRole="RequestPlayer" ToRole="Player" />
-    <NavigationProperty Name="Request" Relationship="Self.FK_RequestPlayer_Request" FromRole="RequestPlayer" ToRole="Request" />
+    <NavigationProperty Name="Player" Relationship="Tournament_421_LatypovDinarLenarovichModel.FK_MatchPlayer_Player" FromRole="RequestPlayer" ToRole="Player" />
+    <NavigationProperty Name="Request" Relationship="Tournament_421_LatypovDinarLenarovichModel.FK_RequestPlayer_Request" FromRole="RequestPlayer" ToRole="Request" />
   </EntityType>
   <EntityType Name="Role">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-    <NavigationProperty Name="Moderator" Relationship="Self.FK_Moderator_Access" FromRole="Role" ToRole="Moderator" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Moderator" Relationship="Tournament_421_LatypovDinarLenarovichModel.FK_Moderator_Access" FromRole="Role" ToRole="Moderator" />
   </EntityType>
   <EntityType Name="State">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <NavigationProperty Name="Tournament" Relationship="Self.FK_Tournament_State" FromRole="State" ToRole="Tournament" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Tournament" Relationship="Tournament_421_LatypovDinarLenarovichModel.FK_Tournament_State" FromRole="State" ToRole="Tournament" />
   </EntityType>
   <EntityType Name="sysdiagrams">
     <Key>
       <PropertyRef Name="diagram_id" />
     </Key>
-    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
     <Property Name="principal_id" Type="Int32" Nullable="false" />
     <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="version" Type="Int32" />
@@ -138,24 +223,24 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" />
-    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <NavigationProperty Name="PlayerOfTeam" Relationship="Self.FK_PlayerOfTeam_Team" FromRole="Team" ToRole="PlayerOfTeam" />
-    <NavigationProperty Name="Request" Relationship="Self.FK_Team_Request" FromRole="Team" ToRole="Request" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="PlayerOfTeam" Relationship="Tournament_421_LatypovDinarLenarovichModel.FK_PlayerOfTeam_Team" FromRole="Team" ToRole="PlayerOfTeam" />
+    <NavigationProperty Name="Request" Relationship="Tournament_421_LatypovDinarLenarovichModel.FK_Team_Request" FromRole="Team" ToRole="Request" />
   </EntityType>
   <EntityType Name="TeamRole">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="PlayerOfTeam" Relationship="Self.FK_PlayerOfTeam_TeamRole" FromRole="TeamRole" ToRole="PlayerOfTeam" />
+    <NavigationProperty Name="PlayerOfTeam" Relationship="Tournament_421_LatypovDinarLenarovichModel.FK_PlayerOfTeam_TeamRole" FromRole="TeamRole" ToRole="PlayerOfTeam" />
   </EntityType>
   <EntityType Name="Tournament">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="TypeId" Type="Int32" Nullable="false" />
     <Property Name="DatetimeTournament" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="PrizePool" Type="Int32" Nullable="false" />
@@ -164,33 +249,33 @@
     <Property Name="MinRating" Type="Int32" />
     <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="CountPlayer" Type="Int32" />
-    <NavigationProperty Name="Game" Relationship="Self.FK_Tournament_Game" FromRole="Tournament" ToRole="Game" />
-    <NavigationProperty Name="Match" Relationship="Self.FK_Match_Tournament" FromRole="Tournament" ToRole="Match" />
-    <NavigationProperty Name="Request" Relationship="Self.FK_Request_Tournament" FromRole="Tournament" ToRole="Request" />
-    <NavigationProperty Name="State" Relationship="Self.FK_Tournament_State" FromRole="Tournament" ToRole="State" />
-    <NavigationProperty Name="Type" Relationship="Self.FK_Tournament_Type" FromRole="Tournament" ToRole="Type" />
+    <NavigationProperty Name="Game" Relationship="Tournament_421_LatypovDinarLenarovichModel.FK_Tournament_Game" FromRole="Tournament" ToRole="Game" />
+    <NavigationProperty Name="Match" Relationship="Tournament_421_LatypovDinarLenarovichModel.FK_Match_Tournament" FromRole="Tournament" ToRole="Match" />
+    <NavigationProperty Name="Request" Relationship="Tournament_421_LatypovDinarLenarovichModel.FK_Request_Tournament" FromRole="Tournament" ToRole="Request" />
+    <NavigationProperty Name="State" Relationship="Tournament_421_LatypovDinarLenarovichModel.FK_Tournament_State" FromRole="Tournament" ToRole="State" />
+    <NavigationProperty Name="Type" Relationship="Tournament_421_LatypovDinarLenarovichModel.FK_Tournament_Type" FromRole="Tournament" ToRole="Type" />
   </EntityType>
   <EntityType Name="Type">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <NavigationProperty Name="Tournament" Relationship="Self.FK_Tournament_Type" FromRole="Type" ToRole="Tournament" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Tournament" Relationship="Tournament_421_LatypovDinarLenarovichModel.FK_Tournament_Type" FromRole="Type" ToRole="Tournament" />
   </EntityType>
   <EntityType Name="UserLogin">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Login" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Login" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="Moderator" Relationship="Self.FK_Moderator_UserLogin" FromRole="UserLogin" ToRole="Moderator" />
-    <NavigationProperty Name="Player" Relationship="Self.FK_Player_UserLogin" FromRole="UserLogin" ToRole="Player" />
+    <NavigationProperty Name="Moderator" Relationship="Tournament_421_LatypovDinarLenarovichModel.FK_Moderator_UserLogin" FromRole="UserLogin" ToRole="Moderator" />
+    <NavigationProperty Name="Player" Relationship="Tournament_421_LatypovDinarLenarovichModel.FK_Player_UserLogin" FromRole="UserLogin" ToRole="Player" />
   </EntityType>
   <Association Name="FK_GameRate_Game">
-    <End Role="Game" Type="Self.Game" Multiplicity="1" />
-    <End Role="GameRate" Type="Self.GameRate" Multiplicity="*" />
+    <End Type="Tournament_421_LatypovDinarLenarovichModel.Game" Role="Game" Multiplicity="1" />
+    <End Type="Tournament_421_LatypovDinarLenarovichModel.GameRate" Role="GameRate" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Game">
         <PropertyRef Name="Id" />
@@ -201,8 +286,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Tournament_Game">
-    <End Role="Game" Type="Self.Game" Multiplicity="1" />
-    <End Role="Tournament" Type="Self.Tournament" Multiplicity="*" />
+    <End Type="Tournament_421_LatypovDinarLenarovichModel.Game" Role="Game" Multiplicity="1" />
+    <End Type="Tournament_421_LatypovDinarLenarovichModel.Tournament" Role="Tournament" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Game">
         <PropertyRef Name="Id" />
@@ -213,8 +298,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_GameRate_Player">
-    <End Role="Player" Type="Self.Player" Multiplicity="1" />
-    <End Role="GameRate" Type="Self.GameRate" Multiplicity="*" />
+    <End Type="Tournament_421_LatypovDinarLenarovichModel.Player" Role="Player" Multiplicity="1" />
+    <End Type="Tournament_421_LatypovDinarLenarovichModel.GameRate" Role="GameRate" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Player">
         <PropertyRef Name="Id" />
@@ -225,8 +310,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Match_Tournament">
-    <End Role="Tournament" Type="Self.Tournament" Multiplicity="1" />
-    <End Role="Match" Type="Self.Match" Multiplicity="*" />
+    <End Type="Tournament_421_LatypovDinarLenarovichModel.Tournament" Role="Tournament" Multiplicity="1" />
+    <End Type="Tournament_421_LatypovDinarLenarovichModel.Match" Role="Match" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Tournament">
         <PropertyRef Name="Id" />
@@ -237,8 +322,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_RequestMatch_Match">
-    <End Role="Match" Type="Self.Match" Multiplicity="1" />
-    <End Role="RequestMatch" Type="Self.RequestMatch" Multiplicity="*" />
+    <End Type="Tournament_421_LatypovDinarLenarovichModel.Match" Role="Match" Multiplicity="1" />
+    <End Type="Tournament_421_LatypovDinarLenarovichModel.RequestMatch" Role="RequestMatch" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Match">
         <PropertyRef Name="Id" />
@@ -249,8 +334,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Moderator_Access">
-    <End Role="Role" Type="Self.Role" Multiplicity="1" />
-    <End Role="Moderator" Type="Self.Moderator" Multiplicity="*" />
+    <End Type="Tournament_421_LatypovDinarLenarovichModel.Role" Role="Role" Multiplicity="1" />
+    <End Type="Tournament_421_LatypovDinarLenarovichModel.Moderator" Role="Moderator" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Role">
         <PropertyRef Name="Id" />
@@ -261,8 +346,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Moderator_UserLogin">
-    <End Role="UserLogin" Type="Self.UserLogin" Multiplicity="1" />
-    <End Role="Moderator" Type="Self.Moderator" Multiplicity="0..1" />
+    <End Type="Tournament_421_LatypovDinarLenarovichModel.UserLogin" Role="UserLogin" Multiplicity="1" />
+    <End Type="Tournament_421_LatypovDinarLenarovichModel.Moderator" Role="Moderator" Multiplicity="0..1" />
     <ReferentialConstraint>
       <Principal Role="UserLogin">
         <PropertyRef Name="Id" />
@@ -273,8 +358,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_MatchPlayer_Player">
-    <End Role="Player" Type="Self.Player" Multiplicity="1" />
-    <End Role="RequestPlayer" Type="Self.RequestPlayer" Multiplicity="*" />
+    <End Type="Tournament_421_LatypovDinarLenarovichModel.Player" Role="Player" Multiplicity="1" />
+    <End Type="Tournament_421_LatypovDinarLenarovichModel.RequestPlayer" Role="RequestPlayer" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Player">
         <PropertyRef Name="Id" />
@@ -285,8 +370,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Player_UserLogin">
-    <End Role="UserLogin" Type="Self.UserLogin" Multiplicity="1" />
-    <End Role="Player" Type="Self.Player" Multiplicity="0..1" />
+    <End Type="Tournament_421_LatypovDinarLenarovichModel.UserLogin" Role="UserLogin" Multiplicity="1" />
+    <End Type="Tournament_421_LatypovDinarLenarovichModel.Player" Role="Player" Multiplicity="0..1" />
     <ReferentialConstraint>
       <Principal Role="UserLogin">
         <PropertyRef Name="Id" />
@@ -296,21 +381,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_PlayerOfTeam_Player">
-    <End Role="Player" Type="Self.Player" Multiplicity="1" />
-    <End Role="PlayerOfTeam" Type="Self.PlayerOfTeam" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Player">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="PlayerOfTeam">
-        <PropertyRef Name="PlayerId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_PlayerOfTeam_Team">
-    <End Role="Team" Type="Self.Team" Multiplicity="1" />
-    <End Role="PlayerOfTeam" Type="Self.PlayerOfTeam" Multiplicity="*" />
+    <End Type="Tournament_421_LatypovDinarLenarovichModel.Team" Role="Team" Multiplicity="1" />
+    <End Type="Tournament_421_LatypovDinarLenarovichModel.PlayerOfTeam" Role="PlayerOfTeam" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Team">
         <PropertyRef Name="Id" />
@@ -321,8 +394,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_PlayerOfTeam_TeamRole">
-    <End Role="TeamRole" Type="Self.TeamRole" Multiplicity="1" />
-    <End Role="PlayerOfTeam" Type="Self.PlayerOfTeam" Multiplicity="*" />
+    <End Type="Tournament_421_LatypovDinarLenarovichModel.TeamRole" Role="TeamRole" Multiplicity="1" />
+    <End Type="Tournament_421_LatypovDinarLenarovichModel.PlayerOfTeam" Role="PlayerOfTeam" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="TeamRole">
         <PropertyRef Name="Id" />
@@ -333,8 +406,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Request_Tournament">
-    <End Role="Tournament" Type="Self.Tournament" Multiplicity="1" />
-    <End Role="Request" Type="Self.Request" Multiplicity="*" />
+    <End Type="Tournament_421_LatypovDinarLenarovichModel.Tournament" Role="Tournament" Multiplicity="1" />
+    <End Type="Tournament_421_LatypovDinarLenarovichModel.Request" Role="Request" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Tournament">
         <PropertyRef Name="Id" />
@@ -345,8 +418,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_RequestMatch_Request">
-    <End Role="Request" Type="Self.Request" Multiplicity="1" />
-    <End Role="RequestMatch" Type="Self.RequestMatch" Multiplicity="*" />
+    <End Type="Tournament_421_LatypovDinarLenarovichModel.Request" Role="Request" Multiplicity="1" />
+    <End Type="Tournament_421_LatypovDinarLenarovichModel.RequestMatch" Role="RequestMatch" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Request">
         <PropertyRef Name="Id" />
@@ -357,8 +430,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_RequestPlayer_Request">
-    <End Role="Request" Type="Self.Request" Multiplicity="1" />
-    <End Role="RequestPlayer" Type="Self.RequestPlayer" Multiplicity="0..1" />
+    <End Type="Tournament_421_LatypovDinarLenarovichModel.Request" Role="Request" Multiplicity="1" />
+    <End Type="Tournament_421_LatypovDinarLenarovichModel.RequestPlayer" Role="RequestPlayer" Multiplicity="0..1" />
     <ReferentialConstraint>
       <Principal Role="Request">
         <PropertyRef Name="Id" />
@@ -369,8 +442,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Team_Request">
-    <End Role="Request" Type="Self.Request" Multiplicity="1" />
-    <End Role="Team" Type="Self.Team" Multiplicity="0..1" />
+    <End Type="Tournament_421_LatypovDinarLenarovichModel.Request" Role="Request" Multiplicity="1" />
+    <End Type="Tournament_421_LatypovDinarLenarovichModel.Team" Role="Team" Multiplicity="0..1" />
     <ReferentialConstraint>
       <Principal Role="Request">
         <PropertyRef Name="Id" />
@@ -381,8 +454,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Tournament_State">
-    <End Role="State" Type="Self.State" Multiplicity="1" />
-    <End Role="Tournament" Type="Self.Tournament" Multiplicity="*" />
+    <End Type="Tournament_421_LatypovDinarLenarovichModel.State" Role="State" Multiplicity="1" />
+    <End Type="Tournament_421_LatypovDinarLenarovichModel.Tournament" Role="Tournament" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="State">
         <PropertyRef Name="Id" />
@@ -393,8 +466,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Tournament_Type">
-    <End Role="Type" Type="Self.Type" Multiplicity="1" />
-    <End Role="Tournament" Type="Self.Tournament" Multiplicity="*" />
+    <End Type="Tournament_421_LatypovDinarLenarovichModel.Type" Role="Type" Multiplicity="1" />
+    <End Type="Tournament_421_LatypovDinarLenarovichModel.Tournament" Role="Tournament" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Type">
         <PropertyRef Name="Id" />
@@ -404,95 +477,4 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="Tournament_421_LatypovDinarLenarovichEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="Game" EntityType="Self.Game" />
-    <EntitySet Name="GameRate" EntityType="Self.GameRate" />
-    <EntitySet Name="Match" EntityType="Self.Match" />
-    <EntitySet Name="Moderator" EntityType="Self.Moderator" />
-    <EntitySet Name="Player" EntityType="Self.Player" />
-    <EntitySet Name="PlayerOfTeam" EntityType="Self.PlayerOfTeam" />
-    <EntitySet Name="Request" EntityType="Self.Request" />
-    <EntitySet Name="RequestMatch" EntityType="Self.RequestMatch" />
-    <EntitySet Name="RequestPlayer" EntityType="Self.RequestPlayer" />
-    <EntitySet Name="Role" EntityType="Self.Role" />
-    <EntitySet Name="State" EntityType="Self.State" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
-    <EntitySet Name="Team" EntityType="Self.Team" />
-    <EntitySet Name="TeamRole" EntityType="Self.TeamRole" />
-    <EntitySet Name="Tournament" EntityType="Self.Tournament" />
-    <EntitySet Name="Type" EntityType="Self.Type" />
-    <EntitySet Name="UserLogin" EntityType="Self.UserLogin" />
-    <AssociationSet Name="FK_GameRate_Game" Association="Self.FK_GameRate_Game">
-      <End Role="Game" EntitySet="Game" />
-      <End Role="GameRate" EntitySet="GameRate" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Tournament_Game" Association="Self.FK_Tournament_Game">
-      <End Role="Game" EntitySet="Game" />
-      <End Role="Tournament" EntitySet="Tournament" />
-    </AssociationSet>
-    <AssociationSet Name="FK_GameRate_Player" Association="Self.FK_GameRate_Player">
-      <End Role="Player" EntitySet="Player" />
-      <End Role="GameRate" EntitySet="GameRate" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Match_Tournament" Association="Self.FK_Match_Tournament">
-      <End Role="Tournament" EntitySet="Tournament" />
-      <End Role="Match" EntitySet="Match" />
-    </AssociationSet>
-    <AssociationSet Name="FK_RequestMatch_Match" Association="Self.FK_RequestMatch_Match">
-      <End Role="Match" EntitySet="Match" />
-      <End Role="RequestMatch" EntitySet="RequestMatch" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Moderator_Access" Association="Self.FK_Moderator_Access">
-      <End Role="Role" EntitySet="Role" />
-      <End Role="Moderator" EntitySet="Moderator" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Moderator_UserLogin" Association="Self.FK_Moderator_UserLogin">
-      <End Role="UserLogin" EntitySet="UserLogin" />
-      <End Role="Moderator" EntitySet="Moderator" />
-    </AssociationSet>
-    <AssociationSet Name="FK_MatchPlayer_Player" Association="Self.FK_MatchPlayer_Player">
-      <End Role="Player" EntitySet="Player" />
-      <End Role="RequestPlayer" EntitySet="RequestPlayer" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Player_UserLogin" Association="Self.FK_Player_UserLogin">
-      <End Role="UserLogin" EntitySet="UserLogin" />
-      <End Role="Player" EntitySet="Player" />
-    </AssociationSet>
-    <AssociationSet Name="FK_PlayerOfTeam_Player" Association="Self.FK_PlayerOfTeam_Player">
-      <End Role="Player" EntitySet="Player" />
-      <End Role="PlayerOfTeam" EntitySet="PlayerOfTeam" />
-    </AssociationSet>
-    <AssociationSet Name="FK_PlayerOfTeam_Team" Association="Self.FK_PlayerOfTeam_Team">
-      <End Role="Team" EntitySet="Team" />
-      <End Role="PlayerOfTeam" EntitySet="PlayerOfTeam" />
-    </AssociationSet>
-    <AssociationSet Name="FK_PlayerOfTeam_TeamRole" Association="Self.FK_PlayerOfTeam_TeamRole">
-      <End Role="TeamRole" EntitySet="TeamRole" />
-      <End Role="PlayerOfTeam" EntitySet="PlayerOfTeam" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Request_Tournament" Association="Self.FK_Request_Tournament">
-      <End Role="Tournament" EntitySet="Tournament" />
-      <End Role="Request" EntitySet="Request" />
-    </AssociationSet>
-    <AssociationSet Name="FK_RequestMatch_Request" Association="Self.FK_RequestMatch_Request">
-      <End Role="Request" EntitySet="Request" />
-      <End Role="RequestMatch" EntitySet="RequestMatch" />
-    </AssociationSet>
-    <AssociationSet Name="FK_RequestPlayer_Request" Association="Self.FK_RequestPlayer_Request">
-      <End Role="Request" EntitySet="Request" />
-      <End Role="RequestPlayer" EntitySet="RequestPlayer" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Team_Request" Association="Self.FK_Team_Request">
-      <End Role="Request" EntitySet="Request" />
-      <End Role="Team" EntitySet="Team" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Tournament_State" Association="Self.FK_Tournament_State">
-      <End Role="State" EntitySet="State" />
-      <End Role="Tournament" EntitySet="Tournament" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Tournament_Type" Association="Self.FK_Tournament_Type">
-      <End Role="Type" EntitySet="Type" />
-      <End Role="Tournament" EntitySet="Tournament" />
-    </AssociationSet>
-  </EntityContainer>
 </Schema>

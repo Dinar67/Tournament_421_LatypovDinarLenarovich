@@ -57,6 +57,7 @@
         </ListView>
 
         <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" VerticalAlignment="Center" Grid.Row="2">
+            <Button x:Name="SeeBtn" Click="SeeBtn_Click" Margin="0 0 10 0" Width="120">Просмотреть</Button>
             <Button x:Name="AddBtn" Click="AddBtn_Click" Margin="0 0 10 0" Width="120">Добавить</Button>
             <Button x:Name="EditBtn" Click="EditBtn_Click" Margin="0 0 10 0" Width="120">Редактировать</Button>
             <Button x:Name="DeleteBtn" Click="DeleteBtn_Click" Margin="0 0 10 0" Width="120">Удалить</Button>

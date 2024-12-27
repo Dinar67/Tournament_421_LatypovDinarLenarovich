@@ -22,29 +22,42 @@ namespace TourMe.Pages
             StateCb.ItemsSource = App.db.State.ToList();
             GameCb.ItemsSource = App.db.Game.ToList();
 
-            if(tournament.Id != 0)
+            if (tournament.Id != 0)
             {
                 HoursTb.Text = tournament.DatetimeTournament.TimeOfDay.Hours.ToString();
                 MinutesTb.Text = tournament.DatetimeTournament.TimeOfDay.Minutes.ToString();
                 DateTb.SelectedDate = tournament.DatetimeTournament.Date;
             }
+            if (App.CurrentUser != null)
+            {
+                RequestBtn.Visibility = App.CurrentUser.GetPlayerVisibility;
+                CreateBtn.Visibility = App.CurrentUser.GetAdministratorVisibility;
+                MainStack.IsEnabled = App.CurrentUser.GetAdministratorVisibility == Visibility.Visible;
+            }
+            else
+            {
+                RequestBtn.Visibility = Visibility.Collapsed;
+                CreateBtn.Visibility = Visibility.Collapsed;
+                MainStack.IsEnabled = false;
+            }
+            
 
             DataContext = Tournament;
         }
 
         private void MinRatingTb_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
-            Regex regex = new Regex(@"0-9*");
+            Regex regex = new Regex("[^0-9]+");
             e.Handled = regex.IsMatch(e.Text);
         }
         private void CountPlayerTb_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
-            Regex regex = new Regex(@"0-9*");
+            Regex regex = new Regex("[^0-9]+");
             e.Handled = regex.IsMatch(e.Text);
         }
         private void PrizePoolTb_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
-            Regex regex = new Regex(@"0-9*");
+            Regex regex = new Regex("[^0-9]+");
             e.Handled = regex.IsMatch(e.Text);
         }
         private void BackBtn_Click(object sender, RoutedEventArgs e)
@@ -121,6 +134,11 @@ namespace TourMe.Pages
             App.db.SaveChanges();
             Navigations.Next(new TournirsPage());
             Methods.TakeInformation("Успешно сохранено!");
+        }
+
+        private void RequestBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Navigations.Next(new RequestPage(new Request() { IdTournament = Tournament.Id}));
         }
     }
 }

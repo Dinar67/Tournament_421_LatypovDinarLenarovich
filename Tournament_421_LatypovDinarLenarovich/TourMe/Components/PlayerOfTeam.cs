@@ -14,13 +14,11 @@ namespace TourMe.Components
     
     public partial class PlayerOfTeam
     {
-        public int TeamId { get; set; }
-        public int PlayerId { get; set; }
-        public int IdRole { get; set; }
         public int Id { get; set; }
+        public int TeamId { get; set; }
+        public int IdRole { get; set; }
         public string ContactInfo { get; set; }
     
-        public virtual Player Player { get; set; }
         public virtual Team Team { get; set; }
         public virtual TeamRole TeamRole { get; set; }
     }

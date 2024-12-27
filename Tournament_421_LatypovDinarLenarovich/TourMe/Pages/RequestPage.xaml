@@ -15,7 +15,7 @@
                 <StackPanel VerticalAlignment="Center">
                     <StackPanel Orientation="Horizontal" Margin="0 0 0 10" HorizontalAlignment="Center">
                         <TextBlock Width="120">Турнир</TextBlock>
-                        <ComboBox Width="300" IsEditable="True" x:Name="TournirCb" SelectionChanged="TournirCb_SelectionChanged"></ComboBox>
+                        <ComboBox Width="300" IsEditable="True" x:Name="TournirCb" DisplayMemberPath="Title" SelectionChanged="TournirCb_SelectionChanged"></ComboBox>
                     </StackPanel>
                     <StackPanel x:Name="NameCommandSP" Orientation="Horizontal" Margin="0 0 0 10" HorizontalAlignment="Center">
                         <TextBlock Width="120">Название команды</TextBlock>
@@ -46,7 +46,7 @@
                                     <GridViewColumn Width="100" Header="Роль">
                                         <GridViewColumn.CellTemplate>
                                             <DataTemplate>
-                                                <ComboBox ItemsSource="{Binding Roles}" SelectedItem="{Binding TeamRole}" DisplayMemberPath="Name"></ComboBox>
+                                                <ComboBox ItemsSource="{Binding Roles}" SelectedItem="{Binding TeamRole}" DisplayMemberPath="Name" Width="90"></ComboBox>
                                             </DataTemplate>
                                         </GridViewColumn.CellTemplate>
                                     </GridViewColumn>

@@ -30,6 +30,9 @@ namespace TourMe.Pages
                 AddBtn.Visibility = App.CurrentUser.GetAdministratorVisibility;
                 EditBtn.Visibility = App.CurrentUser.GetAdministratorVisibility;
                 DeleteBtn.Visibility = App.CurrentUser.GetAdministratorVisibility;
+                SeeBtn.Visibility = App.CurrentUser.GetAdministratorVisibility 
+                    == System.Windows.Visibility.Visible ? 
+                    System.Windows.Visibility.Collapsed : System.Windows.Visibility.Visible;
             }
 
             
@@ -97,6 +100,12 @@ namespace TourMe.Pages
             App.db.Tournament.Remove(MyList.SelectedItem as Tournament);
             App.db.SaveChanges();
             Refresh();
+        }
+
+        private void SeeBtn_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            if (MyList.SelectedItem != null)
+                Navigations.Next(new AddTournirePage(MyList.SelectedItem as Tournament));
         }
     }
 }

@@ -19,7 +19,6 @@ namespace TourMe.Components
         {
             this.GameRate = new HashSet<GameRate>();
             this.RequestPlayer = new HashSet<RequestPlayer>();
-            this.PlayerOfTeam = new HashSet<PlayerOfTeam>();
         }
     
         public int Id { get; set; }
@@ -32,7 +31,5 @@ namespace TourMe.Components
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RequestPlayer> RequestPlayer { get; set; }
         public virtual UserLogin UserLogin { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PlayerOfTeam> PlayerOfTeam { get; set; }
     }
 }

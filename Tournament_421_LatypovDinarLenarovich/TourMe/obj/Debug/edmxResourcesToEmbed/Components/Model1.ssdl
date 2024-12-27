@@ -47,12 +47,12 @@
   </EntityType>
   <EntityType Name="PlayerOfTeam">
     <Key>
-      <PropertyRef Name="TeamId" />
-      <PropertyRef Name="PlayerId" />
+      <PropertyRef Name="Id" />
     </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="TeamId" Type="int" Nullable="false" />
-    <Property Name="PlayerId" Type="int" Nullable="false" />
     <Property Name="IdRole" Type="int" Nullable="false" />
+    <Property Name="ContactInfo" Type="nvarchar(max)" />
   </EntityType>
   <EntityType Name="Request">
     <Key>
@@ -119,7 +119,7 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Name" Type="nvarchar(max)" />
   </EntityType>
   <EntityType Name="Tournament">
@@ -233,18 +233,6 @@
       </Principal>
       <Dependent Role="Player">
         <PropertyRef Name="Id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_PlayerOfTeam_Player">
-    <End Role="Player" Type="Self.Player" Multiplicity="1" />
-    <End Role="PlayerOfTeam" Type="Self.PlayerOfTeam" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Player">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="PlayerOfTeam">
-        <PropertyRef Name="PlayerId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -413,10 +401,6 @@
     <AssociationSet Name="FK_Player_UserLogin" Association="Self.FK_Player_UserLogin">
       <End Role="UserLogin" EntitySet="UserLogin" />
       <End Role="Player" EntitySet="Player" />
-    </AssociationSet>
-    <AssociationSet Name="FK_PlayerOfTeam_Player" Association="Self.FK_PlayerOfTeam_Player">
-      <End Role="Player" EntitySet="Player" />
-      <End Role="PlayerOfTeam" EntitySet="PlayerOfTeam" />
     </AssociationSet>
     <AssociationSet Name="FK_PlayerOfTeam_Team" Association="Self.FK_PlayerOfTeam_Team">
       <End Role="Team" EntitySet="Team" />

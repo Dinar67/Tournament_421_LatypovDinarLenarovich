@@ -5,41 +5,40 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="bdc30a2b7e4f409b8d2739d8be636ec2" Name="Diagram1">
-        <EntityTypeShape EntityType="Tournament_421_LatypovDinarLenarovichModel.Game" Width="1.5" PointX="0.75" PointY="6.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="Tournament_421_LatypovDinarLenarovichModel.GameRate" Width="1.5" PointX="3" PointY="6.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="Tournament_421_LatypovDinarLenarovichModel.Match" Width="1.5" PointX="8.25" PointY="4.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="Tournament_421_LatypovDinarLenarovichModel.Moderator" Width="1.5" PointX="14.25" PointY="1.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="Tournament_421_LatypovDinarLenarovichModel.Player" Width="1.5" PointX="11.25" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Tournament_421_LatypovDinarLenarovichModel.PlayerOfTeam" Width="1.5" PointX="12.75" PointY="11.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="Tournament_421_LatypovDinarLenarovichModel.Request" Width="1.5" PointX="8.25" PointY="7.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="Tournament_421_LatypovDinarLenarovichModel.RequestMatch" Width="1.5" PointX="10.5" PointY="6.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="Tournament_421_LatypovDinarLenarovichModel.RequestPlayer" Width="1.5" PointX="13.5" PointY="8" IsExpanded="true" />
-        <EntityTypeShape EntityType="Tournament_421_LatypovDinarLenarovichModel.Role" Width="1.5" PointX="12" PointY="17" IsExpanded="true" />
-        <EntityTypeShape EntityType="Tournament_421_LatypovDinarLenarovichModel.State" Width="1.5" PointX="3.75" PointY="3.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="Tournament_421_LatypovDinarLenarovichModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="Tournament_421_LatypovDinarLenarovichModel.Team" Width="1.5" PointX="10.5" PointY="10.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="Tournament_421_LatypovDinarLenarovichModel.TeamRole" Width="1.5" PointX="10.5" PointY="14" IsExpanded="true" />
-        <EntityTypeShape EntityType="Tournament_421_LatypovDinarLenarovichModel.Tournament" Width="1.5" PointX="6" PointY="5.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="Tournament_421_LatypovDinarLenarovichModel.Type" Width="1.5" PointX="3.75" PointY="9.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="Tournament_421_LatypovDinarLenarovichModel.UserLogin" Width="1.5" PointX="9" PointY="1.75" IsExpanded="true" />
-        <AssociationConnector Association="Tournament_421_LatypovDinarLenarovichModel.FK_GameRate_Game" ManuallyRouted="false" />
-        <AssociationConnector Association="Tournament_421_LatypovDinarLenarovichModel.FK_Tournament_Game" ManuallyRouted="false" />
-        <AssociationConnector Association="Tournament_421_LatypovDinarLenarovichModel.FK_GameRate_Player" ManuallyRouted="false" />
-        <AssociationConnector Association="Tournament_421_LatypovDinarLenarovichModel.FK_Match_Tournament" ManuallyRouted="false" />
-        <AssociationConnector Association="Tournament_421_LatypovDinarLenarovichModel.FK_RequestMatch_Match" ManuallyRouted="false" />
-        <AssociationConnector Association="Tournament_421_LatypovDinarLenarovichModel.FK_Moderator_Access" ManuallyRouted="false" />
-        <AssociationConnector Association="Tournament_421_LatypovDinarLenarovichModel.FK_Moderator_UserLogin" ManuallyRouted="false" />
-        <AssociationConnector Association="Tournament_421_LatypovDinarLenarovichModel.FK_MatchPlayer_Player" ManuallyRouted="false" />
-        <AssociationConnector Association="Tournament_421_LatypovDinarLenarovichModel.FK_Player_UserLogin" ManuallyRouted="false" />
-        <AssociationConnector Association="Tournament_421_LatypovDinarLenarovichModel.FK_PlayerOfTeam_Player" ManuallyRouted="false" />
-        <AssociationConnector Association="Tournament_421_LatypovDinarLenarovichModel.FK_PlayerOfTeam_Team" ManuallyRouted="false" />
-        <AssociationConnector Association="Tournament_421_LatypovDinarLenarovichModel.FK_PlayerOfTeam_TeamRole" ManuallyRouted="false" />
-        <AssociationConnector Association="Tournament_421_LatypovDinarLenarovichModel.FK_Request_Tournament" ManuallyRouted="false" />
-        <AssociationConnector Association="Tournament_421_LatypovDinarLenarovichModel.FK_RequestMatch_Request" ManuallyRouted="false" />
-        <AssociationConnector Association="Tournament_421_LatypovDinarLenarovichModel.FK_RequestPlayer_Request" ManuallyRouted="false" />
-        <AssociationConnector Association="Tournament_421_LatypovDinarLenarovichModel.FK_Team_Request" ManuallyRouted="false" />
-        <AssociationConnector Association="Tournament_421_LatypovDinarLenarovichModel.FK_Tournament_State" ManuallyRouted="false" />
-        <AssociationConnector Association="Tournament_421_LatypovDinarLenarovichModel.FK_Tournament_Type" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="Tournament_421_LatypovDinarLenarovichModel.Game" Width="1.5" PointX="0.75" PointY="7" />
+        <EntityTypeShape EntityType="Tournament_421_LatypovDinarLenarovichModel.GameRate" Width="1.5" PointX="3" PointY="6.625" />
+        <EntityTypeShape EntityType="Tournament_421_LatypovDinarLenarovichModel.Match" Width="1.5" PointX="8.25" PointY="8.375" />
+        <EntityTypeShape EntityType="Tournament_421_LatypovDinarLenarovichModel.Moderator" Width="1.5" PointX="3.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Tournament_421_LatypovDinarLenarovichModel.Player" Width="1.5" PointX="0.75" PointY="3.625" />
+        <EntityTypeShape EntityType="Tournament_421_LatypovDinarLenarovichModel.PlayerOfTeam" Width="1.5" PointX="12.75" PointY="7.875" />
+        <EntityTypeShape EntityType="Tournament_421_LatypovDinarLenarovichModel.Request" Width="1.5" PointX="8.25" PointY="4.875" />
+        <EntityTypeShape EntityType="Tournament_421_LatypovDinarLenarovichModel.RequestMatch" Width="1.5" PointX="13.5" PointY="3.5" />
+        <EntityTypeShape EntityType="Tournament_421_LatypovDinarLenarovichModel.RequestPlayer" Width="1.5" PointX="10.5" PointY="5.25" />
+        <EntityTypeShape EntityType="Tournament_421_LatypovDinarLenarovichModel.Role" Width="1.5" PointX="1.5" PointY="10.125" />
+        <EntityTypeShape EntityType="Tournament_421_LatypovDinarLenarovichModel.State" Width="1.5" PointX="3.75" PointY="3.875" />
+        <EntityTypeShape EntityType="Tournament_421_LatypovDinarLenarovichModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="1.375" />
+        <EntityTypeShape EntityType="Tournament_421_LatypovDinarLenarovichModel.Team" Width="1.5" PointX="10.5" PointY="8.125" />
+        <EntityTypeShape EntityType="Tournament_421_LatypovDinarLenarovichModel.TeamRole" Width="1.5" PointX="10.5" PointY="11.25" />
+        <EntityTypeShape EntityType="Tournament_421_LatypovDinarLenarovichModel.Tournament" Width="1.5" PointX="6" PointY="5.875" />
+        <EntityTypeShape EntityType="Tournament_421_LatypovDinarLenarovichModel.Type" Width="1.5" PointX="3.75" PointY="10.25" />
+        <EntityTypeShape EntityType="Tournament_421_LatypovDinarLenarovichModel.UserLogin" Width="1.5" PointX="1.5" PointY="0.875" />
+        <AssociationConnector Association="Tournament_421_LatypovDinarLenarovichModel.FK_GameRate_Game" />
+        <AssociationConnector Association="Tournament_421_LatypovDinarLenarovichModel.FK_Tournament_Game" />
+        <AssociationConnector Association="Tournament_421_LatypovDinarLenarovichModel.FK_GameRate_Player" />
+        <AssociationConnector Association="Tournament_421_LatypovDinarLenarovichModel.FK_Match_Tournament" />
+        <AssociationConnector Association="Tournament_421_LatypovDinarLenarovichModel.FK_RequestMatch_Match" />
+        <AssociationConnector Association="Tournament_421_LatypovDinarLenarovichModel.FK_Moderator_Access" />
+        <AssociationConnector Association="Tournament_421_LatypovDinarLenarovichModel.FK_Moderator_UserLogin" />
+        <AssociationConnector Association="Tournament_421_LatypovDinarLenarovichModel.FK_MatchPlayer_Player" />
+        <AssociationConnector Association="Tournament_421_LatypovDinarLenarovichModel.FK_Player_UserLogin" />
+        <AssociationConnector Association="Tournament_421_LatypovDinarLenarovichModel.FK_PlayerOfTeam_Team" />
+        <AssociationConnector Association="Tournament_421_LatypovDinarLenarovichModel.FK_PlayerOfTeam_TeamRole" />
+        <AssociationConnector Association="Tournament_421_LatypovDinarLenarovichModel.FK_Request_Tournament" />
+        <AssociationConnector Association="Tournament_421_LatypovDinarLenarovichModel.FK_RequestMatch_Request" />
+        <AssociationConnector Association="Tournament_421_LatypovDinarLenarovichModel.FK_RequestPlayer_Request" />
+        <AssociationConnector Association="Tournament_421_LatypovDinarLenarovichModel.FK_Team_Request" />
+        <AssociationConnector Association="Tournament_421_LatypovDinarLenarovichModel.FK_Tournament_State" />
+        <AssociationConnector Association="Tournament_421_LatypovDinarLenarovichModel.FK_Tournament_Type" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

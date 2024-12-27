@@ -9,47 +9,50 @@
       Title="AddTournirePage">
     <Grid>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 -30 0 0">
-            <TextBlock Text="Создание турнира" FontSize="30" HorizontalAlignment="Center" FontWeight="Bold" Margin="0 0 0 30"></TextBlock>
-            <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
-                <TextBlock Width="150">Название турнира</TextBlock>
-                <TextBox Width="200" MaxLength="100" x:Name="TitleTb" Text="{Binding Title}"></TextBox>
+            <StackPanel x:Name="MainStack">
+                <TextBlock Text="Турнир" FontSize="30" HorizontalAlignment="Center" FontWeight="Bold" Margin="0 0 0 30"></TextBlock>
+                <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+                    <TextBlock Width="150">Название турнира</TextBlock>
+                    <TextBox Width="200" MaxLength="100" x:Name="TitleTb" Text="{Binding Title}"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+                    <TextBlock Width="150">Тип турнира</TextBlock>
+                    <ComboBox Width="200" x:Name="TypeCb" DisplayMemberPath="Title" SelectedItem="{Binding Type}"></ComboBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+                    <TextBlock Width="150">Дата и время</TextBlock>
+                    <TextBox MaxLength="2" Width="30" Height="20" x:Name="HoursTb"></TextBox>
+                    <TextBlock Width="10" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center">:</TextBlock>
+                    <TextBox MaxLength="2" Width="30" Height="20" Margin="0 0 10 0" x:Name="MinutesTb"></TextBox>
+                    <DatePicker Width="120" x:Name="DateTb"></DatePicker>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+                    <TextBlock Width="150">Призовой фонд</TextBlock>
+                    <TextBox Width="200" x:Name="PrizePoolTb" Text="{Binding PrizePool}" PreviewTextInput="PrizePoolTb_PreviewTextInput"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+                    <TextBlock Width="150">Статус</TextBlock>
+                    <ComboBox Width="200" x:Name="StateCb" DisplayMemberPath="Title" SelectedItem="{Binding State}"></ComboBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+                    <TextBlock Width="150">Игра</TextBlock>
+                    <ComboBox Width="200" x:Name="GameCb" DisplayMemberPath="Name" SelectedItem="{Binding Game}"></ComboBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+                    <TextBlock Width="150">Минимальный рейтинг</TextBlock>
+                    <TextBox Width="200" x:Name="MinRatingTb" Text="{Binding MinRating}" PreviewTextInput="MinRatingTb_PreviewTextInput"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+                    <TextBlock Width="150">Описание</TextBlock>
+                    <TextBox Width="200" Height="60" x:Name="DescriptionTb" Text="{Binding Description}" TextWrapping="Wrap"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+                    <TextBlock Width="150">Количество игроков</TextBlock>
+                    <TextBox Width="200" x:Name="CountPlayerTb" Text="{Binding CountPlayer}" MaxLength="2" PreviewTextInput="CountPlayerTb_PreviewTextInput"></TextBox>
+                </StackPanel>
             </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
-                <TextBlock Width="150">Тип турнира</TextBlock>
-                <ComboBox Width="200" x:Name="TypeCb" DisplayMemberPath="Title" SelectedItem="{Binding Type}"></ComboBox>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
-                <TextBlock Width="150">Дата и время</TextBlock>
-                <TextBox MaxLength="2" Width="30" Height="20" x:Name="HoursTb"></TextBox>
-                <TextBlock Width="10" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center">:</TextBlock>
-                <TextBox MaxLength="2" Width="30" Height="20" Margin="0 0 10 0" x:Name="MinutesTb"></TextBox>
-                <DatePicker Width="120" x:Name="DateTb"></DatePicker>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
-                <TextBlock Width="150">Призовой фонд</TextBlock>
-                <TextBox Width="200" x:Name="PrizePoolTb" Text="{Binding PrizePool}" PreviewTextInput="PrizePoolTb_PreviewTextInput"></TextBox>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
-                <TextBlock Width="150">Статус</TextBlock>
-                <ComboBox Width="200" x:Name="StateCb" DisplayMemberPath="Title" SelectedItem="{Binding State}"></ComboBox>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
-                <TextBlock Width="150">Игра</TextBlock>
-                <ComboBox Width="200" x:Name="GameCb" DisplayMemberPath="Name" SelectedItem="{Binding Game}"></ComboBox>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
-                <TextBlock Width="150">Минимальный рейтинг</TextBlock>
-                <TextBox Width="200" x:Name="MinRatingTb" Text="{Binding MinRating}" PreviewTextInput="MinRatingTb_PreviewTextInput"></TextBox>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
-                <TextBlock Width="150">Описание</TextBlock>
-                <TextBox Width="200" Height="60" x:Name="DescriptionTb" Text="{Binding Description}" TextWrapping="Wrap"></TextBox>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
-                <TextBlock Width="150">Количество игроков</TextBlock>
-                <TextBox Width="200" x:Name="CountPlayerTb" Text="{Binding CountPlayer}" MaxLength="2" PreviewTextInput="CountPlayerTb_PreviewTextInput"></TextBox>
-            </StackPanel>
-            <Button x:Name="CreateBtn" Click="CreateBtn_Click">Создать турнир</Button>
+            <Button x:Name="CreateBtn" Click="CreateBtn_Click" Margin="0 0 0 10">Сохранить</Button>
+            <Button x:Name="RequestBtn" Click="RequestBtn_Click">Записаться на турнир</Button>
         </StackPanel>
 
         <Button Width="100" x:Name="BackBtn" Margin="20" HorizontalAlignment="Left" VerticalAlignment="Top" Click="BackBtn_Click">Назад</Button>

@@ -32,3 +32,5 @@ C:\Users\MSI Modern 14\source\repos\Tournament_421_LatypovDinarLenarovich\Tourna
 C:\Users\MSI Modern 14\source\repos\Tournament_421_LatypovDinarLenarovich\Tournament_421_LatypovDinarLenarovich\TourMe\obj\Debug\Tournament_421_LatypovDinarLenarovich.csproj.GenerateResource.cache
 C:\Users\MSI Modern 14\source\repos\Tournament_421_LatypovDinarLenarovich\Tournament_421_LatypovDinarLenarovich\TourMe\obj\Debug\Tournament_421_LatypovDinarLenarovich.csproj.CoreCompileInputs.cache
 C:\Users\MSI Modern 14\source\repos\Tournament_421_LatypovDinarLenarovich\Tournament_421_LatypovDinarLenarovich\TourMe\obj\Debug\Tourname.8D4C5E19.Up2Date
+C:\Users\MSI Modern 14\source\repos\Tournament_421_LatypovDinarLenarovich\Tournament_421_LatypovDinarLenarovich\TourMe\obj\Debug\Pages\RequestPage.g.cs
+C:\Users\MSI Modern 14\source\repos\Tournament_421_LatypovDinarLenarovich\Tournament_421_LatypovDinarLenarovich\TourMe\obj\Debug\Pages\RequestPage.baml
