@@ -33,6 +33,7 @@ namespace TourMe.Pages
                 SeeBtn.Visibility = App.CurrentUser.GetAdministratorVisibility 
                     == System.Windows.Visibility.Visible ? 
                     System.Windows.Visibility.Collapsed : System.Windows.Visibility.Visible;
+                ReqBtn.Visibility = App.CurrentUser.GetAdministratorVisibility;
             }
 
             
@@ -106,6 +107,11 @@ namespace TourMe.Pages
         {
             if (MyList.SelectedItem != null)
                 Navigations.Next(new AddTournirePage(MyList.SelectedItem as Tournament));
+        }
+
+        private void ReqBtn_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            Navigations.Next(new RequestsPage());
         }
     }
 }

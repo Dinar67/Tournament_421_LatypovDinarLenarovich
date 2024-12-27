@@ -34,6 +34,7 @@
             </StackPanel>
         </StackPanel>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button x:Name="ReqBtn" Click="ReqBtn_Click" Width="140" Margin="0 0 10 0">Запросы на турниры</Button>
             <Button x:Name="EnterBtn" Click="EnterBtn_Click" Width="120" Margin="0 0 10 0">Войти в аккаунт</Button>
             <Button x:Name="ExitBtn" Click="ExitBtn_Click" Width="120" Margin="0 0 10 0">Выйти из аккаунта</Button>
         </StackPanel>

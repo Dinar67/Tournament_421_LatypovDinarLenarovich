@@ -1,0 +1,57 @@
+﻿<Page x:Class="TourMe.Pages.RequestsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TourMe.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="650" d:DesignWidth="1000"
+      Title="RequestsPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="67*"/>
+            <RowDefinition Height="531*"/>
+            <RowDefinition Height="52*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,0,0,0">
+            <TextBlock VerticalAlignment="Center" FontSize="18" FontWeight="Bold">Заявки</TextBlock>
+
+            <StackPanel Margin="30 0 0 0" VerticalAlignment="Center">
+                <TextBlock VerticalAlignment="Center" Margin="0 0 0 5">Поиск</TextBlock>
+                <TextBox x:Name="SearchTb" TextChanged="SearchTb_TextChanged" MaxLength="50" Width="200" VerticalAlignment="Center"></TextBox>
+            </StackPanel>
+
+            <StackPanel Margin="30 0 0 0">
+                <TextBlock Margin="0 0 0 5">Фильтровать по туриниру</TextBlock>
+                <ComboBox x:Name="FilterCb" SelectionChanged="FilterCb_SelectionChanged" DisplayMemberPath="Title" IsEditable="True" Width="200">
+                </ComboBox>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button x:Name="BackBtn" Click="BackBtn_Click" Width="100" Margin="0 0 10 0">Назад</Button>
+        </StackPanel>
+
+        <ListView x:Name="MyList" Grid.Row="1">
+            <ListView.View>
+                <GridView>
+                    <GridView.Columns>
+                        <GridViewColumn Header="Id" Width="80" DisplayMemberBinding="{Binding Id}"></GridViewColumn>
+                        <GridViewColumn Header="Наименование" Width="150" DisplayMemberBinding="{Binding Tournament.Title}"></GridViewColumn>
+                        <GridViewColumn Header="Тип" Width="100" DisplayMemberBinding="{Binding Tournament.Type.Title}"></GridViewColumn>
+                        <GridViewColumn Header="Дата и время начала" Width="150" DisplayMemberBinding="{Binding Tournament.DatetimeTournament}"></GridViewColumn>
+                        <GridViewColumn Header="Призовой фонд" Width="100" DisplayMemberBinding="{Binding Tournament.PrizePool}"></GridViewColumn>
+                        <GridViewColumn Header="Статус" Width="100" DisplayMemberBinding="{Binding Tournament.State.Title}"></GridViewColumn>
+                        <GridViewColumn Header="Игра" Width="100" DisplayMemberBinding="{Binding Tournament.Game.Name}"></GridViewColumn>
+                        <GridViewColumn Header="Статус заявки" Width="120" DisplayMemberBinding="{Binding GetStatus}"></GridViewColumn>
+                    </GridView.Columns>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" VerticalAlignment="Center" Grid.Row="2">
+            <Button x:Name="SeeBtn" Click="SeeBtn_Click" Margin="0 0 10 0" Width="120">Просмотреть</Button>
+        </StackPanel>
+    </Grid>
+</Page>

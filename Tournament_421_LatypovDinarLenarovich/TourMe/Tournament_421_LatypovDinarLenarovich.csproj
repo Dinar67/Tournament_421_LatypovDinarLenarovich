@@ -167,6 +167,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\RequestsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\TournirsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -186,6 +190,9 @@
     </Compile>
     <Compile Include="Pages\RequestPage.xaml.cs">
       <DependentUpon>RequestPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RequestsPage.xaml.cs">
+      <DependentUpon>RequestsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\TournirsPage.xaml.cs">
       <DependentUpon>TournirsPage.xaml</DependentUpon>

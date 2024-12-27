@@ -11,7 +11,7 @@
     <Grid>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 -30 0 0">
             <TextBlock Text="Заявка на участие в туринире" x:Name="TittleTb" FontSize="30" HorizontalAlignment="Center" FontWeight="Bold" Margin="0 0 0 30"></TextBlock>
-            <StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Horizontal" x:Name="MainPanel">
                 <StackPanel VerticalAlignment="Center">
                     <StackPanel Orientation="Horizontal" Margin="0 0 0 10" HorizontalAlignment="Center">
                         <TextBlock Width="120">Турнир</TextBlock>
@@ -27,7 +27,7 @@
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Margin="0 0 0 10" HorizontalAlignment="Center" x:Name="StatusSP">
                         <TextBlock Width="120">Статус</TextBlock>
-                        <TextBlock Width="300" TextAlignment="Center" Text="{Binding GetStatus}"></TextBlock>
+                        <TextBlock Width="300" TextAlignment="Center" x:Name="StatusTb"></TextBlock>
                     </StackPanel>
                 </StackPanel>
 
@@ -60,6 +60,8 @@
                     </StackPanel>
                 </StackPanel>
             </StackPanel>
+            <Button x:Name="NoBtn" Click="NoBtn_Click" Width="300" Margin="0 30 0 0">Отклонить заявку</Button>
+            <Button x:Name="YesBtn" Click="YesBtn_Click" Width="300" Margin="0 30 0 0">Приянять заявку</Button>
             <Button x:Name="RequestBtn" Click="RequestBtn_Click" Width="300" Margin="0 30 0 0">Подать заявку</Button>
         </StackPanel>
 

@@ -5,7 +5,17 @@
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <Style TargetType="Button">
+            <Style.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="13"></Setter>
+                </Style>
+            </Style.Resources>
             <Setter Property="Height" Value="25"></Setter>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect BlurRadius="10" Color="#FF333333" Opacity="0.9"></DropShadowEffect>
+                </Setter.Value>
+            </Setter>
         </Style>
     </Application.Resources>
 </Application>
