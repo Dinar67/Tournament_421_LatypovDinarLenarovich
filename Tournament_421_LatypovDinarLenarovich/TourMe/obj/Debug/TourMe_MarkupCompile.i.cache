@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\MSI Modern 14\source\repos\Tournament_421_LatypovDinarLenarovich\Tournament_421_LatypovDinarLenarovich\TourMe\App.xaml
-5-639541450
+6-1935661014
 2-1407320939
-32-177216672
+36-55154943
 23934272247
-MainWindow.xaml;Pages\AddTournirePage.xaml;Pages\AuthPage.xaml;Pages\RegPage.xaml;Pages\TournirsPage.xaml;
+MainWindow.xaml;Pages\AddTournirePage.xaml;Pages\AuthPage.xaml;Pages\RegPage.xaml;Pages\RequestPage.xaml;Pages\TournirsPage.xaml;
 
-False
+True
 

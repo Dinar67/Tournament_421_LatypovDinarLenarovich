@@ -105,6 +105,9 @@
     <Compile Include="Components\Moderator.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Components\PartialClasses\PlayerOfTeam.cs" />
+    <Compile Include="Components\PartialClasses\Request.cs" />
+    <Compile Include="Components\PartialClasses\UserLogin.cs" />
     <Compile Include="Components\Player.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -160,6 +163,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\RequestPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\TournirsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -176,6 +183,9 @@
     </Compile>
     <Compile Include="Pages\RegPage.xaml.cs">
       <DependentUpon>RegPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RequestPage.xaml.cs">
+      <DependentUpon>RequestPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\TournirsPage.xaml.cs">
       <DependentUpon>TournirsPage.xaml</DependentUpon>
@@ -246,7 +256,6 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Components\PartialClasses\" />
     <Folder Include="Components\UserControllers\" />
     <Folder Include="Windows\" />
   </ItemGroup>

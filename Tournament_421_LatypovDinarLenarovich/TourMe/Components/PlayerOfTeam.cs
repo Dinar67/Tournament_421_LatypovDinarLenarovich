@@ -17,6 +17,8 @@ namespace TourMe.Components
         public int TeamId { get; set; }
         public int PlayerId { get; set; }
         public int IdRole { get; set; }
+        public int Id { get; set; }
+        public string ContactInfo { get; set; }
     
         public virtual Player Player { get; set; }
         public virtual Team Team { get; set; }

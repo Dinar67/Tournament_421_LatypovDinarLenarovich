@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Хранилище Tournament_421_LatypovDinarLenarovichModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Хранилище Tournament_421_LatypovDinarLenarovichModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Game">
           <Key>
             <PropertyRef Name="Id" />
@@ -52,12 +52,12 @@
         </EntityType>
         <EntityType Name="PlayerOfTeam">
           <Key>
-            <PropertyRef Name="TeamId" />
-            <PropertyRef Name="PlayerId" />
+            <PropertyRef Name="Id" />
           </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TeamId" Type="int" Nullable="false" />
-          <Property Name="PlayerId" Type="int" Nullable="false" />
           <Property Name="IdRole" Type="int" Nullable="false" />
+          <Property Name="ContactInfo" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="Request">
           <Key>
@@ -241,18 +241,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_PlayerOfTeam_Player">
-          <End Role="Player" Type="Self.Player" Multiplicity="1" />
-          <End Role="PlayerOfTeam" Type="Self.PlayerOfTeam" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Player">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="PlayerOfTeam">
-              <PropertyRef Name="PlayerId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_PlayerOfTeam_Team">
           <End Role="Team" Type="Self.Team" Multiplicity="1" />
           <End Role="PlayerOfTeam" Type="Self.PlayerOfTeam" Multiplicity="*" />
@@ -419,10 +407,6 @@
             <End Role="UserLogin" EntitySet="UserLogin" />
             <End Role="Player" EntitySet="Player" />
           </AssociationSet>
-          <AssociationSet Name="FK_PlayerOfTeam_Player" Association="Self.FK_PlayerOfTeam_Player">
-            <End Role="Player" EntitySet="Player" />
-            <End Role="PlayerOfTeam" EntitySet="PlayerOfTeam" />
-          </AssociationSet>
           <AssociationSet Name="FK_PlayerOfTeam_Team" Association="Self.FK_PlayerOfTeam_Team">
             <End Role="Team" EntitySet="Team" />
             <End Role="PlayerOfTeam" EntitySet="PlayerOfTeam" />
@@ -464,8 +448,7 @@
             <End Role="Tournament" EntitySet="Tournament" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Tournament_421_LatypovDinarLenarovichModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -530,6 +513,7 @@
           <Key>
             <PropertyRef Name="TeamId" />
             <PropertyRef Name="PlayerId" />
+            <PropertyRef Name="Id" />
           </Key>
           <Property Name="TeamId" Type="Int32" Nullable="false" />
           <Property Name="PlayerId" Type="Int32" Nullable="false" />
@@ -537,6 +521,8 @@
           <NavigationProperty Name="Player" Relationship="Self.FK_PlayerOfTeam_Player" FromRole="PlayerOfTeam" ToRole="Player" />
           <NavigationProperty Name="Team" Relationship="Self.FK_PlayerOfTeam_Team" FromRole="PlayerOfTeam" ToRole="Team" />
           <NavigationProperty Name="TeamRole" Relationship="Self.FK_PlayerOfTeam_TeamRole" FromRole="PlayerOfTeam" ToRole="TeamRole" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ContactInfo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Request">
           <Key>
@@ -1023,8 +1009,9 @@
           <EntitySetMapping Name="PlayerOfTeam">
             <EntityTypeMapping TypeName="Tournament_421_LatypovDinarLenarovichModel.PlayerOfTeam">
               <MappingFragment StoreEntitySet="PlayerOfTeam">
+                <ScalarProperty Name="ContactInfo" ColumnName="ContactInfo" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="TeamId" ColumnName="TeamId" />
-                <ScalarProperty Name="PlayerId" ColumnName="PlayerId" />
                 <ScalarProperty Name="IdRole" ColumnName="IdRole" />
               </MappingFragment>
             </EntityTypeMapping>

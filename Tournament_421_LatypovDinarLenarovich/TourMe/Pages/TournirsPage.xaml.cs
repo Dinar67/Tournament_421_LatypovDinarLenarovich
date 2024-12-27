@@ -15,9 +15,24 @@ namespace TourMe.Pages
         {
             InitializeComponent();
             if (App.CurrentUser == null)
+            {
                 ExitBtn.Visibility = System.Windows.Visibility.Collapsed;
+                AddBtn.Visibility = System.Windows.Visibility.Collapsed;
+                EditBtn.Visibility = System.Windows.Visibility.Collapsed;
+                DeleteBtn.Visibility = System.Windows.Visibility.Collapsed;
+
+            }
             else
+            {
                 ExitBtn.Visibility = System.Windows.Visibility.Visible;
+                EnterBtn.Visibility = System.Windows.Visibility.Collapsed;
+
+                AddBtn.Visibility = App.CurrentUser.GetAdministratorVisibility;
+                EditBtn.Visibility = App.CurrentUser.GetAdministratorVisibility;
+                DeleteBtn.Visibility = App.CurrentUser.GetAdministratorVisibility;
+            }
+
+            
 
             FilterCb.SelectedIndex = 0;
         }
