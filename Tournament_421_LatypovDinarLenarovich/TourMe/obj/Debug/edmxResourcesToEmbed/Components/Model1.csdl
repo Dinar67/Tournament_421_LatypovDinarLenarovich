@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="ExamenModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+<Schema Namespace="Tournament_421_LatypovDinarLenarovichModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityType Name="Game">
     <Key>
       <PropertyRef Name="Id" />
@@ -154,7 +154,7 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="TypeId" Type="Int32" Nullable="false" />
     <Property Name="DatetimeTournament" Type="DateTime" Nullable="false" Precision="3" />
@@ -163,12 +163,12 @@
     <Property Name="IdGame" Type="Int32" Nullable="false" />
     <Property Name="MinRating" Type="Int32" />
     <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CountPlayer" Type="Int32" />
     <NavigationProperty Name="Game" Relationship="Self.FK_Tournament_Game" FromRole="Tournament" ToRole="Game" />
     <NavigationProperty Name="Match" Relationship="Self.FK_Match_Tournament" FromRole="Tournament" ToRole="Match" />
     <NavigationProperty Name="Request" Relationship="Self.FK_Request_Tournament" FromRole="Tournament" ToRole="Request" />
     <NavigationProperty Name="State" Relationship="Self.FK_Tournament_State" FromRole="Tournament" ToRole="State" />
     <NavigationProperty Name="Type" Relationship="Self.FK_Tournament_Type" FromRole="Tournament" ToRole="Type" />
-    <Property Name="CountPlayer" Type="Int32" />
   </EntityType>
   <EntityType Name="Type">
     <Key>
@@ -404,7 +404,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="ExamenEntities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="Tournament_421_LatypovDinarLenarovichEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Game" EntityType="Self.Game" />
     <EntitySet Name="GameRate" EntityType="Self.GameRate" />
     <EntitySet Name="Match" EntityType="Self.Match" />

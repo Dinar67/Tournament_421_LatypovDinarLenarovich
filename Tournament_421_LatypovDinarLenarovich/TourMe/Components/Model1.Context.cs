@@ -13,10 +13,10 @@ namespace TourMe.Components
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ExamenEntities : DbContext
+    public partial class Tournament_421_LatypovDinarLenarovichEntities : DbContext
     {
-        public ExamenEntities()
-            : base("name=ExamenEntities")
+        public Tournament_421_LatypovDinarLenarovichEntities()
+            : base("name=Tournament_421_LatypovDinarLenarovichEntities")
         {
         }
     

@@ -1,4 +1,4 @@
-﻿// Создание кода T4 для модели "C:\Users\MSI Modern 14\source\repos\TourMe\TourMe\Components\Model1.edmx" включено. 
+﻿// Создание кода T4 для модели "C:\Users\MSI Modern 14\source\repos\Tournament_421_LatypovDinarLenarovich\Tournament_421_LatypovDinarLenarovich\TourMe\Components\Model1.edmx" включено. 
 // Чтобы включить формирование кода прежних версий, измените значение свойства "Стратегия создания кода" конструктора
 // на "Legacy ObjectContext". Это свойство доступно в окне "Свойства", если модель
 // открыта в конструкторе.

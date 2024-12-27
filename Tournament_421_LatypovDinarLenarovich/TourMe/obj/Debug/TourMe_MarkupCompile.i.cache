@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\MSI Modern 14\source\repos\TourMe\TourMe\obj\Debug\
+C:\Users\MSI Modern 14\source\repos\Tournament_421_LatypovDinarLenarovich\Tournament_421_LatypovDinarLenarovich\TourMe\obj\Debug\
 TourMe
 none
 false
 DEBUG;TRACE
-C:\Users\MSI Modern 14\source\repos\TourMe\TourMe\App.xaml
+C:\Users\MSI Modern 14\source\repos\Tournament_421_LatypovDinarLenarovich\Tournament_421_LatypovDinarLenarovich\TourMe\App.xaml
 5-639541450
 2-1407320939
 32-177216672
-23496993043
+23934272247
 MainWindow.xaml;Pages\AddTournirePage.xaml;Pages\AuthPage.xaml;Pages\RegPage.xaml;Pages\TournirsPage.xaml;
 
-True
+False
 

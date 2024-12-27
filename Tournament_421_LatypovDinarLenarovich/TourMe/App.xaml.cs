@@ -8,7 +8,7 @@ namespace TourMe
     /// </summary>
     public partial class App : Application
     {
-        public static ExamenEntities db = new ExamenEntities();
+        public static Tournament_421_LatypovDinarLenarovichEntities db = new Tournament_421_LatypovDinarLenarovichEntities();
         public static UserLogin CurrentUser {  get; set; }
     }
 }

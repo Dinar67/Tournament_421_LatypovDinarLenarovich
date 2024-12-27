@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="Хранилище ExamenModelContainer" CdmEntityContainer="ExamenEntities">
+  <EntityContainerMapping StorageEntityContainer="Хранилище Tournament_421_LatypovDinarLenarovichModelContainer" CdmEntityContainer="Tournament_421_LatypovDinarLenarovichEntities">
     <EntitySetMapping Name="Game">
-      <EntityTypeMapping TypeName="ExamenModel.Game">
+      <EntityTypeMapping TypeName="Tournament_421_LatypovDinarLenarovichModel.Game">
         <MappingFragment StoreEntitySet="Game">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
@@ -10,7 +10,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="GameRate">
-      <EntityTypeMapping TypeName="ExamenModel.GameRate">
+      <EntityTypeMapping TypeName="Tournament_421_LatypovDinarLenarovichModel.GameRate">
         <MappingFragment StoreEntitySet="GameRate">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="IdPlayer" ColumnName="IdPlayer" />
@@ -21,7 +21,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Match">
-      <EntityTypeMapping TypeName="ExamenModel.Match">
+      <EntityTypeMapping TypeName="Tournament_421_LatypovDinarLenarovichModel.Match">
         <MappingFragment StoreEntitySet="Match">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="IdTournament" ColumnName="IdTournament" />
@@ -32,7 +32,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Moderator">
-      <EntityTypeMapping TypeName="ExamenModel.Moderator">
+      <EntityTypeMapping TypeName="Tournament_421_LatypovDinarLenarovichModel.Moderator">
         <MappingFragment StoreEntitySet="Moderator">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
@@ -42,7 +42,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Player">
-      <EntityTypeMapping TypeName="ExamenModel.Player">
+      <EntityTypeMapping TypeName="Tournament_421_LatypovDinarLenarovichModel.Player">
         <MappingFragment StoreEntitySet="Player">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
@@ -52,7 +52,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="PlayerOfTeam">
-      <EntityTypeMapping TypeName="ExamenModel.PlayerOfTeam">
+      <EntityTypeMapping TypeName="Tournament_421_LatypovDinarLenarovichModel.PlayerOfTeam">
         <MappingFragment StoreEntitySet="PlayerOfTeam">
           <ScalarProperty Name="TeamId" ColumnName="TeamId" />
           <ScalarProperty Name="PlayerId" ColumnName="PlayerId" />
@@ -61,7 +61,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Request">
-      <EntityTypeMapping TypeName="ExamenModel.Request">
+      <EntityTypeMapping TypeName="Tournament_421_LatypovDinarLenarovichModel.Request">
         <MappingFragment StoreEntitySet="Request">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="isAccepted" ColumnName="isAccepted" />
@@ -72,7 +72,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="RequestMatch">
-      <EntityTypeMapping TypeName="ExamenModel.RequestMatch">
+      <EntityTypeMapping TypeName="Tournament_421_LatypovDinarLenarovichModel.RequestMatch">
         <MappingFragment StoreEntitySet="RequestMatch">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="IdRequest" ColumnName="IdRequest" />
@@ -85,7 +85,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="RequestPlayer">
-      <EntityTypeMapping TypeName="ExamenModel.RequestPlayer">
+      <EntityTypeMapping TypeName="Tournament_421_LatypovDinarLenarovichModel.RequestPlayer">
         <MappingFragment StoreEntitySet="RequestPlayer">
           <ScalarProperty Name="IdRequest" ColumnName="IdRequest" />
           <ScalarProperty Name="PlayerId" ColumnName="PlayerId" />
@@ -94,7 +94,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Role">
-      <EntityTypeMapping TypeName="ExamenModel.Role">
+      <EntityTypeMapping TypeName="Tournament_421_LatypovDinarLenarovichModel.Role">
         <MappingFragment StoreEntitySet="Role">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
@@ -102,7 +102,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="State">
-      <EntityTypeMapping TypeName="ExamenModel.State">
+      <EntityTypeMapping TypeName="Tournament_421_LatypovDinarLenarovichModel.State">
         <MappingFragment StoreEntitySet="State">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Title" ColumnName="Title" />
@@ -110,7 +110,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="sysdiagrams">
-      <EntityTypeMapping TypeName="ExamenModel.sysdiagrams">
+      <EntityTypeMapping TypeName="Tournament_421_LatypovDinarLenarovichModel.sysdiagrams">
         <MappingFragment StoreEntitySet="sysdiagrams">
           <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="principal_id" ColumnName="principal_id" />
@@ -121,7 +121,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Team">
-      <EntityTypeMapping TypeName="ExamenModel.Team">
+      <EntityTypeMapping TypeName="Tournament_421_LatypovDinarLenarovichModel.Team">
         <MappingFragment StoreEntitySet="Team">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
@@ -129,7 +129,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="TeamRole">
-      <EntityTypeMapping TypeName="ExamenModel.TeamRole">
+      <EntityTypeMapping TypeName="Tournament_421_LatypovDinarLenarovichModel.TeamRole">
         <MappingFragment StoreEntitySet="TeamRole">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
@@ -137,9 +137,8 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Tournament">
-      <EntityTypeMapping TypeName="ExamenModel.Tournament">
+      <EntityTypeMapping TypeName="Tournament_421_LatypovDinarLenarovichModel.Tournament">
         <MappingFragment StoreEntitySet="Tournament">
-          <ScalarProperty Name="CountPlayer" ColumnName="CountPlayer" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Title" ColumnName="Title" />
           <ScalarProperty Name="TypeId" ColumnName="TypeId" />
@@ -149,11 +148,12 @@
           <ScalarProperty Name="IdGame" ColumnName="IdGame" />
           <ScalarProperty Name="MinRating" ColumnName="MinRating" />
           <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CountPlayer" ColumnName="CountPlayer" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Type">
-      <EntityTypeMapping TypeName="ExamenModel.Type">
+      <EntityTypeMapping TypeName="Tournament_421_LatypovDinarLenarovichModel.Type">
         <MappingFragment StoreEntitySet="Type">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Title" ColumnName="Title" />
@@ -161,7 +161,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="UserLogin">
-      <EntityTypeMapping TypeName="ExamenModel.UserLogin">
+      <EntityTypeMapping TypeName="Tournament_421_LatypovDinarLenarovichModel.UserLogin">
         <MappingFragment StoreEntitySet="UserLogin">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Login" ColumnName="Login" />
