@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="85d129e608854446accd802cf36cd498" Name="Diagram1">
+        <EntityTypeShape EntityType="ExamenModel.Game" Width="1.5" PointX="0.75" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ExamenModel.GameRate" Width="1.5" PointX="3" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ExamenModel.Match" Width="1.5" PointX="8.25" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ExamenModel.Moderator" Width="1.5" PointX="14.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ExamenModel.Player" Width="1.5" PointX="11.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ExamenModel.PlayerOfTeam" Width="1.5" PointX="12.75" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ExamenModel.Request" Width="1.5" PointX="8.25" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ExamenModel.RequestMatch" Width="1.5" PointX="10.5" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ExamenModel.RequestPlayer" Width="1.5" PointX="13.5" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="ExamenModel.Role" Width="1.5" PointX="13.375" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ExamenModel.State" Width="1.5" PointX="3.75" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ExamenModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ExamenModel.Team" Width="1.5" PointX="10.5" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ExamenModel.TeamRole" Width="1.5" PointX="10.5" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="ExamenModel.Tournament" Width="1.5" PointX="6" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ExamenModel.Type" Width="1.5" PointX="3.75" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ExamenModel.UserLogin" Width="1.5" PointX="9" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="ExamenModel.FK_GameRate_Game" ManuallyRouted="false" />
+        <AssociationConnector Association="ExamenModel.FK_Tournament_Game" ManuallyRouted="false" />
+        <AssociationConnector Association="ExamenModel.FK_GameRate_Player" ManuallyRouted="false" />
+        <AssociationConnector Association="ExamenModel.FK_Match_Tournament" ManuallyRouted="false" />
+        <AssociationConnector Association="ExamenModel.FK_RequestMatch_Match" ManuallyRouted="false" />
+        <AssociationConnector Association="ExamenModel.FK_Moderator_Access" ManuallyRouted="false" />
+        <AssociationConnector Association="ExamenModel.FK_Moderator_UserLogin" ManuallyRouted="false" />
+        <AssociationConnector Association="ExamenModel.FK_MatchPlayer_Player" ManuallyRouted="false" />
+        <AssociationConnector Association="ExamenModel.FK_Player_UserLogin" ManuallyRouted="false" />
+        <AssociationConnector Association="ExamenModel.FK_PlayerOfTeam_Player" ManuallyRouted="false" />
+        <AssociationConnector Association="ExamenModel.FK_PlayerOfTeam_Team" ManuallyRouted="false" />
+        <AssociationConnector Association="ExamenModel.FK_PlayerOfTeam_TeamRole" ManuallyRouted="false" />
+        <AssociationConnector Association="ExamenModel.FK_Request_Tournament" ManuallyRouted="false" />
+        <AssociationConnector Association="ExamenModel.FK_RequestMatch_Request" ManuallyRouted="false" />
+        <AssociationConnector Association="ExamenModel.FK_RequestPlayer_Request" ManuallyRouted="false" />
+        <AssociationConnector Association="ExamenModel.FK_Team_Request" ManuallyRouted="false" />
+        <AssociationConnector Association="ExamenModel.FK_Tournament_State" ManuallyRouted="false" />
+        <AssociationConnector Association="ExamenModel.FK_Tournament_Type" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
